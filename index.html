@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic</title>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<p id= "test1" style=" font-family: sans-serif; color: black;">Text sur le centre</p>
+<button id="button1" onclick="location.href='https://www.youtube.com'">Button a droite qui redirige vers Youtube</button>
+<button id="button2">Button a gauche qui est un peu plus beau</button>
+<img id="image" src="https://picsum.photos/200/300" alt="PLACEHOLDERRR">
+<video id="video" controls>
+<source src="https://www.w3schools.com/tags/movie.mp4" type="video/mp4">
+</video>
+<form>
+<label for="colors">Choisi un couloir:</label>    
+        <select id="colors" name="colors" onchange = 'maFunction()'>
+        <option value="red">red</option>        
+        <option value="blue">blue</option>
+        <option value="yellow">yellow</option>
+        <option value="black">reset</option>
+    </select>
+</form>
+</body>
+</html>
