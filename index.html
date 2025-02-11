@@ -1,28 +1,27 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic</title>
-    <script src="./script.js"></script>
-    <link rel="stylesheet" href="./style.css">
+    <title>Projet</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="shortcut icon" href="icons/pencil.png" type="image/png"  />
 </head>
-<body>
-<p id= "test1" style=" font-family: sans-serif; color: black;">Text sur le centre</p>
-<button id="button1" onclick="location.href='https://www.youtube.com'">Button a droite qui redirige vers Youtube</button>
-<button id="button2">Button a gauche qui est un peu plus beau</button>
-<img id="image" src="https://picsum.photos/200/300" alt="PLACEHOLDERRR">
-<video id="video" controls>
-<source src="https://www.w3schools.com/tags/movie.mp4" type="video/mp4">
-</video>
-<form>
-<label for="colors">Choisi un couloir:</label>    
-        <select id="colors" name="colors" onchange = 'maFunction()'>
-        <option value="red">red</option>        
-        <option value="blue">blue</option>
-        <option value="yellow">yellow</option>
-        <option value="black">reset</option>
-    </select>
-</form>
+<body id="body">
+    <h1>CRUD</h1>
+    <!--<button id="darkmode">Light Mode</button>-->
+    <p id ='title'> Mettez votre utilisateur</p>
+    <section class="contadores">
+        <div id="UsuariosCreados">Utilisateurs créés: 0</div>
+        <div id = "UsuariosActualizados">Utilisateurs mis a jour: 0</div>
+        <div id="UsuariosBorrados">Utilisateurs supprimés: 0</div>
+    </section>
+    <input type="text" id="nom" placeholder="Nom">
+    <button id="boton">Envoyer</button>
+    <ul class="lista"> </ul>
+        <footer>
+            <p id="minombre">Projet Personel</p>
+        </footer>
+        <script src="script.js"></script>
 </body>
 </html>
