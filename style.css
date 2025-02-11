@@ -1,44 +1,196 @@
 body {
-    background-color: pink;
-    margin: 0; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    height: 100vh;
-}
-#button1 {
-    position: absolute;
-    right: 100px;
-}
-
-#button2{
-    position: absolute; 
-    left: 100px;
-    border-radius: 50%;
-    height: 120px;
-    width: 120px;
-    color: rgb(255, 255, 255);
-    background-color: #add8e6;
-}
-#image
-{
-    position: absolute;
-    bottom: 60px;
-    width: 120x;
-    height: 100px;
-}
-#video{
-    position: absolute;
-    top: 60px;
-    width: 250px;
-    height: 200px;
-}
-form {
-    position: absolute;
-    top: 60px;
-    right: 30px;
+    font-size: 15px;
+    font-weight: 400;
     display: flex;
-    flex-direction: column; 
-    align-items: flex-start; 
+    flex-direction: column;
+    align-items: center; 
+    background-image: radial-gradient(circle, #0e846e, #000000); 
+}
+h1 {
+    font-size: 3.5rem;
+    margin: 2rem 0;
+    letter-spacing: 5px;
+    background-image: linear-gradient(45deg, #0e846e, #000000); 
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    transition: all 0.3s ease;
+    -webkit-text-stroke: 1px white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  h1:hover
+  {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+    transition: .3s;
+    }
+  
+  
+#title
+{
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#nom {
+    margin-bottom: 20px; 
+    padding: 10px; 
+    border-radius: 20px;
+    border-color: transparent
+    
+}
+#minombre {
+    position: fixed; 
+    bottom: 20px;
+    left: 20px; 
+    font-size: 15px;
+    font-weight: 200;
+    transition: .3s;
+    background: rgba(0, 0, 0, 0.3); 
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+}
+@media (max-width: 768px) /*Je sais pas ou mettre ça*/
+{
+    #minombre
+    {
+        position: fixed;
+        color: black;
+        background-color: transparent;
+        padding: 0px;
+        border-radius: 0;
+        font-size: 0;
+    }
+}
+#minombre:hover
+{
+    transition : .3s;
+    transform: scale(1.1);
+
+}
+#boton
+{
+    cursor: pointer;
+    border-radius: 40px;
+    padding: 18px;
+    font-weight: 650;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    transition: .3s;
+    background: linear-gradient(45deg, #cee7f7, #f1d3fd);
+
+}
+#boton:hover {
+    background-color: rgb(200, 200, 200);
+    box-shadow: 8px 8px 0px rgb(0, 0, 0);
+    transform: translateY(-5px);
+    transition: .3s;
+
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    border-radius: 25px;
 }
 
+li {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+    display: block;
+    background-color: #f9f9f9;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+li:hover
+{
+    box-shadow: 2px 5px 0px rgb(0, 0, 0);
+    transform: scale(1.1);
+    transition: .3s;
+}
+
+.contadores {
+    position: absolute; 
+    left: 20px; 
+    top: 20px; 
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+}
+
+.contadores > * {
+    background: rgba(0, 0, 0, 0.3); 
+    padding: 10px;
+    border-radius: 8px;
+}
+.contadores:hover
+{
+    transition : .3s;
+    transform: scale(1.1);
+
+}
+@media (max-width: 768px) {
+    .contadores {
+        position: fixed; 
+        left: 0;
+        bottom: 0; 
+        top: auto; 
+        width: 100%; 
+        flex-direction: row;
+        justify-content: center; 
+        background: rgba(0, 0, 0, 0.7); 
+        padding: 10px 0;
+        gap: 10px;
+    }
+
+    .contadores > * {
+        margin-bottom: 0; 
+        font-size: 0.8rem; 
+        padding: 8px;
+        width: 90%; 
+        text-align: center;
+    }
+}
+.actualizar
+{
+    position: relative;
+    width: 25x;
+    height: 25px;
+    border-radius: 25px;
+    border: 2px solid rgb(34, 117, 199);
+    background-color:rgb(34, 117, 199);
+    cursor: pointer;
+    box-shadow: 0 0 10px #333;
+    overflow: hidden;
+    transition: .3s;
+}
+.actualizar:hover
+{
+    background-color: rgb(34, 117, 199);
+    transform: scale(1.2);
+    box-shadow: 0 0 4px #111;
+    transition: .3s;
+}
+.delete
+{
+    position: relative;
+    width: 25x;
+    height: 25px;
+    border-radius: 25px;
+    border: 2px solid rgb(231, 50, 50);
+    background-color:rgb(210, 27, 27);
+    cursor: pointer;
+    box-shadow: 0 0 10px #333;
+    overflow: hidden;
+    transition: .3s;
+
+}
+.borrar:hover
+{
+    background-color: rgb(210, 27, 27);
+    transform: scale(1.2);
+    box-shadow: 0 0 4px #111;
+    transition: .3s;
+
+}
